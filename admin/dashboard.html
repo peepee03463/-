@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Admin Dashboard</h1>
+
+    <p>ลำดับปัจจุบัน: <strong id="currentQueue">-</strong></p>
+    <p>จำนวนคิวที่รอ: <strong id="pendingCount">-</strong></p>
+
+    <div>
+      <button onclick="nextQueue()">เรียกคิวถัดไป</button>
+      <button onclick="skipQueue()">ข้ามคิว</button>
+      <button onclick="cancelQueue()">ยกเลิกคิว</button>
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>หมายเลขคิว</th>
+          <th>ชื่อ</th>
+          <th>เบอร์โทร</th>
+          <th>เวลา</th>
+          <th>สถานะ</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody id="queueTableBody"></tbody>
+    </table>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="dashboard.js"></script>
+</body>
+</html>

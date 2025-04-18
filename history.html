@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ประวัติการจองคิว</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>ประวัติการจองคิวของคุณ</h1>
+
+    <form id="lookupForm">
+      <label>อีเมลหรือเบอร์โทร:</label>
+      <input type="text" id="lookupInput" required />
+      <button type="submit">ค้นหา</button>
+    </form>
+
+    <table id="historyTable" style="width:100%; margin-top: 20px;">
+      <thead>
+        <tr>
+          <th>วันเวลา</th>
+          <th>คิวที่</th>
+          <th>สถานะ</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+
+  <script src="history.js"></script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>สถานะคิว</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>สถานะคิวของคุณ</h1>
+
+    <p>หมายเลขคิวของคุณ: <strong id="myQueueNumber">...</strong></p>
+    <p>ลำดับที่กำลังเรียก: <strong id="currentQueue">...</strong></p>
+    <p>เวลาที่เหลือโดยประมาณ: <strong id="estimatedTime">...</strong></p>
+
+    <label>
+      <input type="checkbox" id="notifyLine" />
+      รับแจ้งเตือนผ่าน Line
+    </label>
+    <label>
+      <input type="checkbox" id="notifyEmail" />
+      รับแจ้งเตือนผ่าน Email
+    </label>
+    <button id="subscribeNotify">สมัครรับการแจ้งเตือน</button>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="status.js"></script>
+</body>
+</html>

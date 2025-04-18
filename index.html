@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>จองคิวร้าน</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>ร้านบิวตี้ซาลอน</h1>
+    <p>เปิดบริการ: 10:00 - 20:00</p>
+
+    <form id="bookingForm">
+      <label>ชื่อ:</label>
+      <input type="text" name="name" required />
+
+      <label>เบอร์โทร:</label>
+      <input type="tel" name="phone" required pattern="0[0-9]{9}" />
+
+      <label>อีเมล:</label>
+      <input type="email" name="email" required />
+
+      <label>เวลาที่ต้องการจอง:</label>
+      <input type="time" name="bookingTime" required min="10:00" max="20:00" />
+
+      <label>
+        <input type="checkbox" name="notifyLine" />
+        รับแจ้งเตือนผ่าน Line
+      </label>
+      <label>
+        <input type="checkbox" name="notifyEmail" />
+        รับแจ้งเตือนผ่าน Email
+      </label>
+
+      <button type="submit">จองคิว</button>
+    </form>
+
+    <div id="result"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
